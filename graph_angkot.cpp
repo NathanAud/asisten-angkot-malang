@@ -343,6 +343,27 @@ struct Graph
 	}
 };
 
+void csvInput(Graph& g, string filename)
+{
+	ifstream inf{filename};
+
+	inf.seekg(36);
+
+	string inputLine{};
+	while(getline(inf,inputLine))
+	{
+		stringstream os{inputLine};
+		string source,destination,angkot;
+		double distance;
+		getline(os,source,';');
+		getline(os,destination,';');
+		getline(os,angkot,';');
+		os >> distance;
+
+		g.addEdge(source,destination,angkot,distance);
+	}
+}
+
 bool menu(Graph& g)
 {
 	cout << "\nMENU\n1. Rute\n2. Daftar Nama Jalanan\n3. Info\n4. Keluar\n";
@@ -401,24 +422,8 @@ bool menu(Graph& g)
 int main()
 {
 	Graph malang;
-	
-	ifstream inf{"jalur_angkot.csv"};
 
-	inf.seekg(36);
-
-	string inputLine{};
-	while(getline(inf,inputLine))
-	{
-		stringstream os{inputLine};
-		string source,destination,angkot;
-		double distance;
-		getline(os,source,';');
-		getline(os,destination,';');
-		getline(os,angkot,';');
-		os >> distance;
-
-		malang.addEdge(source,destination,angkot,distance);
-	}
+	csvInput(malang, "jalur_angkot.csv");
 
 	// malang.printAdjList();
 	
