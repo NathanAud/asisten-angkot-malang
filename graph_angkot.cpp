@@ -401,18 +401,6 @@ bool menu(Graph& g)
 int main()
 {
 	Graph malang;
-	// Edge edges[]{
-	// 	{"Terminal Arjosari", "Jl. W.R. Supratman", "AL", 7.9}, {"Jl. W.R. Supratman", "Jl. Patimura", "AL", 1.1}, {"Jl. Patimura", "Jl. Trunojoyo", "AL", 0.55}, {"Jl. Trunojoyo", "Jl. Tugu", "AL", 0.5}, {"Jl. Tugu", "Jl. Semeru", "AL", 1}, {"Jl. Semeru", "Jl. Ijen", "AL", 0.8}, {"Jl. Ijen", "Jl. Veteran", "AL", 3.2}, {"Jl. Veteran", "Terminal Landungsari", "AL", 5.3},
-	// 	{"Terminal Landungsari", "Jl. Veteran", "AL", 5.1}, {"Jl. Veteran", "Jl. Ijen", "AL", 1.9}, {"Jl. Ijen", "Jl. Semeru", "AL", 1.2}, {"Jl. Semeru", "Jl. Tugu", "AL", 1}, {"Jl. Tugu", "Jl. Trunojoyo", "AL", 450}, {"Jl. Trunojoyo", "Jl. Patimura", "AL", 0.55}, {"Jl. Patimura", "Jl. W.R. Supratman", "AL", 1.1}, {"Jl. W.R. Supratman", "Terminal Arjosari", "AL", 6.1},
-	// 	{"Terminal Arjosari", "Jl. W.R. Supratman", "ADL", 6.1}, {"Jl. W.R. Supratman", "Jl. Tugu", "ADL", 2.7}, {"Jl. Tugu", "Jl. Semeru", "ADL", 1}, {"Jl. Semeru", "Jl. Ijen", "ADL", 0.8}, {"Jl. Ijen", "Jl. Mayjend Panjaitan", "ADL", 3.2}, {"Jl. Mayjend Panjaitan", "Terminal Landungsari", "ADL", 4.8},
-	// 	{"Terminal Landungsari", "Jl. Mayjend Panjaitan", "ADL", 4.8}, {"Jl. Mayjend Panjaitan", "Jl. Ijen", "ADL", 1.9}, {"Jl. Ijen", "Jl. Semeru", "ADL", 1.2}, {"Jl. Semeru", "Jl. Tugu", "ADL", 1}, {"Jl. Tugu", "Jl. Trunojoyo", "ADL", 0.45}, {"Jl. Trunojoyo", "Jl. Dr. Cipto", "ADL", 1}, {"Jl. Dr. Cipto", "Jl. W.R. Supratman", "ADL", 0.6}, {"Jl. W.R. Supratman", "Terminal Arjosari", "ADL", 6.1},
-	// 	{"Terminal Landungsari", "Jl. Veteran", "GL/HL", 5.1}, {"Jl. Veteran", "Jl. Ijen", "GL/HL", 1.9}, {"Jl. Ijen", "Jl. Merdeka Utara", "GL/HL", 2},
-	// 	{"Jl. Merdeka Utara", "Jl. Tugu", "GA/HA", 0.85}, {"Jl. Tugu", "Jl. Pajajaran", "GA/HA", 0.45}, {"Jl. Pajajaran", "Jl. Trunojoyo", "GA/HA", 0.14}, {"Jl. Trunojoyo", "Jl. Dr. Cipto", "GA/HA", 0.85}, {"Jl. Dr. Cipto", "Jl. W.R. Supratman", "GA/HA", 0.6}, {"Jl. W.R. Supratman", "Terminal Arjosari", "GA/HA", 6.1},
-	// 	{"Terminal Arjosari", "Jl. Merdeka Utara", "AG/AH", 8.1}, {"Jl. Merdeka Utara", "Jl. Kol. Sugiono", "AG/AH", 2}, {"Jl. Kol. Sugiono", "Terminal Gadang", "AG/AH", 3.2},
-	// 	{"Terminal Gadang", "Jl. Kol. Sugiono", "LDG/LDH", 3.2}, {"Jl. Kol. Sugiono", "Jl. Kawi", "LDG/LDH", 3.1}, {"Jl. Kawi", "Jl. Semeru", "LDG/LDH", 0.45}, {"Jl. Semeru", "Jl. Ijen", "LDG/LDH", 1.3}, {"Jl. Ijen", "Jl. Veteran", "LDG/LDH", 1.6}, {"Jl. Veteran", "Jl. Mayjend Panjaitan", "LDG/LDH", 1.1}, {"Jl. Mayjend Panjaitan", "Terminal Landungsari", "LDG/LDH", 4.8}
-	// };
-	
-	// for(unsigned i=0; i < (sizeof(edges)/sizeof(edges[0])); i++) malang.addEdge(edges[i]);
 	
 	ifstream inf{"jalur_angkot.csv"};
 
