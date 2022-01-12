@@ -370,7 +370,7 @@ bool menu(Graph& g)
 	char pilihan{};
 	while(pilihan != '1' && pilihan != '2' && pilihan != '3' && pilihan != '4')
 	{
-		cout << ">>";
+		cout << ">> ";
 		cin >> pilihan; cin.ignore();
 	}
 	
