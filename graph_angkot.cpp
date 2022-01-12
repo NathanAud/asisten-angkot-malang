@@ -367,14 +367,14 @@ void csvInput(Graph& g, string filename)
 bool menu(Graph& g)
 {
 	cout << "\nMENU\n1. Rute\n2. Daftar Nama Jalanan\n3. Info\n4. Keluar\n";
-	char pilihan{};
-	while(pilihan != '1' && pilihan != '2' && pilihan != '3' && pilihan != '4')
+	string pilihan{};
+	while(pilihan != "1" && pilihan != "2" && pilihan != "3" && pilihan != "4")
 	{
 		cout << ">> ";
-		cin >> pilihan; cin.ignore();
+		getline(cin, pilihan);
 	}
 	
-	switch(pilihan)
+	switch(pilihan[0])
 	{
 		case '1':
 		{
