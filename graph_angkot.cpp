@@ -1,4 +1,6 @@
 #include<iostream>
+#include<fstream>
+#include<sstream>
 
 using namespace std;
 
@@ -412,6 +414,24 @@ int main()
 	
 	// for(unsigned i=0; i < (sizeof(edges)/sizeof(edges[0])); i++) malang.addEdge(edges[i]);
 	
+	ifstream inf{"jalur_angkot.csv"};
+
+	inf.seekg(36);
+
+	string inputLine{};
+	while(getline(inf,inputLine))
+	{
+		stringstream os{inputLine};
+		string source,destination,angkot;
+		double distance;
+		getline(os,source,';');
+		getline(os,destination,';');
+		getline(os,angkot,';');
+		os >> distance;
+
+		malang.addEdge(source,destination,angkot,distance);
+	}
+
 	// malang.printAdjList();
 	
 	cout << "---------------------------------------------ASAM---------------------------------------\n";
