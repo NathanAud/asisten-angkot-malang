@@ -218,7 +218,7 @@ struct Graph
 			char pilihan{};
 			while(pilihan != 'y' && pilihan != 'n')
 			{
-				cout << ">>";
+				cout << ">> ";
 				cin >> pilihan;
 				cin.ignore();
 			}
@@ -378,10 +378,10 @@ bool menu(Graph& g)
 	{
 		case '1':
 		{
-			cout << "\nDari Mana Nih?\n>>";
+			cout << "\nDari Mana Nih?\n>> ";
 			string asal; getline(cin, asal);
 			
-			cout << "\nMau Ke Mana Nih?\n>>";
+			cout << "\nMau Ke Mana Nih?\n>> ";
 			string tujuan; getline(cin, tujuan);
 			cout << '\n';
 			
