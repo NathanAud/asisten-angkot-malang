@@ -343,11 +343,19 @@ struct Graph
 	}
 };
 
+char delimiterDetector(ifstream& inf)
+{
+	string str{};
+	getline(inf,str);
+	for(auto i : str) if(!isalnum(i)) return i;
+	return ',';
+}
+
 void csvInput(Graph& g, string filename)
 {
 	ifstream inf{filename};
 
-	inf.seekg(36);
+	char delimiter{delimiterDetector(inf)};
 
 	string inputLine{};
 	while(getline(inf,inputLine))
@@ -355,9 +363,9 @@ void csvInput(Graph& g, string filename)
 		stringstream os{inputLine};
 		string source,destination,angkot;
 		double distance;
-		getline(os,source,';');
-		getline(os,destination,';');
-		getline(os,angkot,';');
+		getline(os,source,delimiter);
+		getline(os,destination,delimiter);
+		getline(os,angkot,delimiter);
 		os >> distance;
 
 		g.addEdge(source,destination,angkot,distance);
